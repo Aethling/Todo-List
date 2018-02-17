@@ -1,0 +1,219 @@
+
+body header input {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 18px;
+}
+body {
+	padding: 80px 0px 0px 0px;
+	background-color: #F1F8F7
+
+}
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(53, 150, 191, 1.0);
+	height: 80px;
+	width: 100%;
+	padding: 15px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	z-index: 5;
+}
+header button svg {
+  width: 16px;
+  height: 16px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -8px 0 0 -8px;
+}
+header button svg .fill {
+  fill: rgba(53, 150, 191, 1.0);
+}
+header input {
+	float: left;
+	color: #fff;
+	border: 0px;
+	height: 50px;
+	width: 100%;
+	text-indent: 18px;
+	padding: 0 60px 0 0;
+	background: rgba(120,185, 215, 1.0);
+	border-radius: 5px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+}
+header button {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	top: 15px;
+	right: 15px;
+	z-index: 2;
+	border: 0px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+header input::-webkit-input-placeholder {  
+	color: rgba(255, 255, 255, 0.75);
+}
+#addImage {
+	height: 20px;
+	width: 20px;
+}
+.container {
+	width: 100%;
+	padding: 15px;
+	position: absolute;
+}
+ul {
+	width: 100%;
+	float: left;
+}
+li.item {
+	position: relative;
+	font-size: 14px;
+	font-weight: 500;
+	color: #444;
+	line-height: 22px;
+	width: 100%;
+	min-height: 50px;
+	background-color: rgba(255, 255, 255, 0.75);
+	font-size: 18px;
+	border: none;
+	height: 50px;
+	text-indent: 12px;
+	border-radius: 5px;
+	float: left;
+	background: white;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	margin-bottom: 15px;
+	padding: 14px 100px 14px 14px;
+	margin: 0 0 10px 0;
+	z-index: 5;
+}
+ul li .buttons {
+	width: 100px;
+	height: 50px;
+	position: absolute;	
+	top: 0;
+	right: 0;
+}
+ul li .buttons button {
+	position: relative;
+	float: left;
+	height: 50px;
+	width: 50px;
+	border: 0px;
+	box-shadow: none;
+	outline: none;
+	cursor: pointer;
+}
+ul li .buttons button:last-of-type:before {
+	content: '';
+	left: 0;
+	height: 30px;
+	width: 1px;
+	top: 10px;
+	position: absolute;
+	background-color: #edf0f1;
+}
+ul li .buttons button svg{
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -11px 0 0 -11px;
+}
+
+.remove svg .fill{
+	fill: #c0cecb;
+}
+.remove svg:hover .fill {
+	fill: red;
+	transition:fill 0.2 s ease;
+}
+.nofill {
+	fill: none;
+}
+
+ul.list li .buttons button.done svg .fill {
+	fill: rgba(53, 150, 191, 1.0);
+}
+ul li .buttons button.done svg {
+	border-radius: 11px;
+	border: 1.5px solid rgba(53, 150, 191, 1.0);
+	transition: background 0.2 ease;
+}
+ul.completed li .buttons button.done svg {
+	background-color: rgba(53, 150, 191, 1.0);
+	border: 0px; 
+}
+ul:not(.completed) li .buttons button.done:hover svg {
+	background: rgba(53, 150, 191, 1.0);
+}
+ul:not(.completed) li .buttons button.done:hover svg .fill {
+	fill:#fff;
+}
+ul.completed li .buttons button.done svg .fill {
+	fill: #fff;
+}
+
+/* means if it doesn't contain any items, don't apply this style */
+ul.completed {
+	padding: 60px 0 0 0;
+	position: relative; 
+}
+/*:empty matches every element that has no children*/
+ul.completed:before {
+	content: '';
+	width: 150px;
+	height: 1px;
+	background: #d8e5e0;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin: 0 0 0 -75px;
+}
+ul.list:empty::after {
+  content: "Yet to do";
+  margin: 15px 0 0 0;
+}
+ul.completed:empty:after {
+	content: "Already done";
+}
+ul.list:after,
+ul.completed:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
